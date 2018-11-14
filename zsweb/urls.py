@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from meiri.views import query_cs
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('query/<qdate>/',query_cs),
 ]
